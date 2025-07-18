@@ -1,0 +1,15 @@
+class Solution 
+{
+    public String sortSentence(String s) 
+    {
+        String s2[] = s.split(" ");
+        int n = s2.length;
+        String arr[] = new String[n];
+        for(int i=0; i<n; i++)
+        {
+            int l = s2[i].length()-1;
+            arr[s2[i].charAt(l)-'1'] = s2[i].substring(0,l);
+        }
+        return String.join(" ",arr);
+    }
+}
