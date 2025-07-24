@@ -1,0 +1,17 @@
+class Solution 
+{
+    public String reverseWords(String s) 
+    {
+        String s2[] = s.split(" ");
+        int n = s2.length;
+        String ans[] = new String[s2.length];
+        for(int j=0; j<n; j++)
+        {
+            String x = s2[j];
+            int l = x.length()-1;
+            ans[j] = "";
+            for(int i = l; i >= 0; i--){ans[j] += x.charAt(i);}
+        }
+        return new String(String.join(" ",ans));
+    }
+}
