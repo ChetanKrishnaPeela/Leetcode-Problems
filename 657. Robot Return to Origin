@@ -1,0 +1,16 @@
+class Solution 
+{
+    public boolean judgeCircle(String moves) 
+    {
+        int n=moves.length();
+        int pos[] = {0,0};
+        for(char c: moves.toCharArray())
+        {
+            if(c == 'U'){pos[0]++;}
+            else if(c == 'D'){pos[0]--;}
+            else if(c == 'L'){pos[1]--;}
+            else {pos[1]++;}
+        }
+        return pos[0] == 0 && pos[1] == 0; 
+    }
+}
