@@ -1,0 +1,27 @@
+class Solution 
+{
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) 
+    {
+        int m=nums1.length,n=nums2.length;
+        int ans[] = new int[nums1.length];
+        for(int i=0; i < m; i++)
+        {
+            int index = 0;
+            for(int j=0; j < n; j++)
+            {
+                if(nums2[j] == nums1[i]) break;
+                index = j;
+            }
+            ans[i] = -1;
+            for(int j = index+1; j<n; j++)
+            {
+                if(nums2[j] > nums1[i])
+                {
+                    ans[i] = nums2[j];
+                    break;
+                }
+            }
+        }
+        return ans;
+    }
+}
