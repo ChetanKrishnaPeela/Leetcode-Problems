@@ -1,0 +1,12 @@
+class Solution {
+    public int rec(int c, int n)
+    {
+        if(c==n) return 1;
+        if(c > n) return 0;
+        return rec(c+1,n)+rec(c+2,n);
+    }
+    public int climbStairs(int n) 
+    {
+        return rec(0,n);
+    }
+}
