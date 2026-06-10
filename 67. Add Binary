@@ -1,0 +1,7 @@
+class Solution {
+    public String addBinary(String a, String b) {
+        int a2 = Integer.parseInt(a,2), b2 = Integer.parseInt(b,2);
+        int sum = a2+b2;
+        return Integer.toBinaryString(sum);
+    }
+}
